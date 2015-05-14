@@ -1,9 +1,16 @@
 %h1 Index page
 
+- if user_signed_in?
+  %p= link_to "Log out", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure" }
+- else
+  %p= link_to "Sign up", new_user_registration_path
+  %p= link_to "Log in", new_user_session_path
+
 - @posts.each do |post|
   = image_tag post.image.url(:medium)
   %p= link_to post.title, post_path(post)
   %p= post.description
+  %p= post.user.email
 
 
 = link_to "New Post", new_post_path
