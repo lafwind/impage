@@ -11,6 +11,7 @@
   %p= link_to post.title, post_path(post)
   %p= post.description
   %p= post.user.email
-
+  %p= "Like: #{post.get_likes.size}"
+  %p= "Dislike #{post.get_dislikes.size}"
 
 = link_to "New Post", new_post_path

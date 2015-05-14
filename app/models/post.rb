@@ -1,4 +1,5 @@
 class Post < ActiveRecord::Base
+  acts_as_votable
   belongs_to :user
 
   has_attached_file :image, styles:  { large: "800x600>", medium: "400x300>", small: "200x150>" }
