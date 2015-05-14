@@ -1,6 +1,7 @@
 %h1 Index page
 
 - @posts.each do |post|
+  = image_tag post.image.url(:medium)
   %p= link_to post.title, post_path(post)
   %p= post.description
 

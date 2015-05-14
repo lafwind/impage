@@ -1,3 +1,7 @@
 %h1 Edit
 
+= image_tag @post.image.url(:medium)
+
 = render "shared/form"
+
+= link_to "Back", root_path

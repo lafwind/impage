@@ -16,6 +16,9 @@
 !/log/.keep
 /tmp
 
+# PaperClip
+/public/system/posts/images/*
+
 # For vim
 *~
 *swp
