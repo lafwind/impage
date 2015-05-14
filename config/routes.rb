@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       get "like", to: "posts#like"
       get "dislike", to: "posts#dislike"
     end
+    resources :comments
   end
 
   root "posts#index"

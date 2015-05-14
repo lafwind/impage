@@ -17,3 +17,11 @@
 -else
   %p= "Like: #{@post.get_likes.size}"
   %p= "Dislike #{@post.get_dislikes.size}"
+
+%h3= pluralize(@post.comments.count, "Comment")
+
+- @comments.each do |comment|
+  %p= comment.user.email
+  %p= comment.content
+
+= render "comments/comment_form"
