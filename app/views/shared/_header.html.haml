@@ -3,9 +3,8 @@
     Impage
 
   %div.header-item
-    %ul
-      - if user_signed_in?
-        %li= link_to "Log out", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure" }
-      - else
-        %li= link_to "Sign up", new_user_registration_path
-        %li= link_to "Log in", new_user_session_path
+    - if user_signed_in?
+      = link_to "Log out", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure" }
+    - else
+      = link_to "Sign up", new_user_registration_path
+      = link_to "Log in", new_user_session_path

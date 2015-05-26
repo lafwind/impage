@@ -17,6 +17,17 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+
 html {
   height: 100%;
 }
@@ -26,13 +37,14 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  @include box_sizing;
 }
 
 // notice-panel
 
 .notice-panel {
   position: absolute;
-  width: 50%;
+  width: 10%;
   text-align: center;
 }
 
@@ -40,28 +52,30 @@ body {
 
 .header-bar {
   height: 100px;
-  border: 1px red solid;
-  padding: 25px;
+  padding: 25px 50px;
 
     .header-logo {
       float: left;
       width: 100px;
       height: 50px;
-      border: 1px red solid;
+      padding: 5px 0;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 23px;
+      color: #384653;
     }
 
     .header-item {
-      ul {
-        float: right;
-        border: 1px red solid;
-        height: 50px;
-      }
-    }
-
-    .header-item {
-      li {
-        list-style-type: none;
-        float: left;
+      float: right;
+      width: 200px;
+      padding: 10px;
+      text-align: center;
+      vertical-align: middle;
+      a {
+        display: inline-block;
+        margin: 0 10px;
+        font-size: 16px;
+        color: #384653;
       }
     }
 }
