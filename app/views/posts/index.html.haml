@@ -1,9 +1,17 @@
 - @posts.each do |post|
-  = image_tag post.image.url(:medium)
-  %p= link_to post.title, post_path(post)
-  %p= post.description
-  %p= post.user.email
-  %p= "Like: #{post.get_likes.size}"
-  %p= "Dislike #{post.get_dislikes.size}"
+  %div.card
+    %div.card_image
+      = image_tag post.image.url(:medium)
+      %p= link_to post.title, post_path(post)
+    %div.card_detail
+      %div.description
+        Description :
+        %p= post.description
+      %div.user
+        By :
+        %p= post.user.email
+      %p= "Like: #{post.get_likes.size}"
+      %p= "Dislike #{post.get_dislikes.size}"
 
-= link_to "New Post", new_post_path
+%div.index_new_post
+  = link_to "New Post", new_post_path
