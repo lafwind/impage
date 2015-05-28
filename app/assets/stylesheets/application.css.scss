@@ -153,14 +153,16 @@ a:hover {
   text-align: center;
 
   .btn {
+    width: 123px;
+    height: 39px;
     display: inline-block;
     border-radius: 20px;
-    background-color: #e0f2f1;
+    background-color: #d8f2f0;
     color: #83c2af;
   }
 
   .btn:hover {
-    background-color: #d8f2f0;
+    background-color: #caede9;
   }
 }
 
@@ -195,13 +197,13 @@ a:hover {
 
   .large_card_action {
     float: left;
-    height: 30px;
+    height: 50px;
 
   }
 
   .large_card_vote {
     float: right;
-    height: 30px;
+    height: 50px;
   }
 
   .large_card_comments {
@@ -232,18 +234,20 @@ a:hover {
         display:block;
         width: 100%;
         padding-bottom: 50px;
+        margin-bottom: 20px;
         border: 1px #eaeaea solid;
-      }
-      .btn {
-        display: block;
-        margin-top: 20px;
-        border-radius: 20px;
-        background-color: #eaeaea;
-        color: #999999;
       }
     }
   }
-
+  .btn {
+    display: inline-block;
+    border-radius: 20px;
+    background-color: #eaeaea;
+    color: #999999;
+  }
+  .btn:hover {
+    background-color: #e1e1e1;
+  }
 }
 
 .new_post {
@@ -287,6 +291,7 @@ a:hover {
     }
 
     .btn {
+      width: 123px;
       display: block;
       margin-top: 20px;
       border-radius: 20px;
@@ -300,12 +305,12 @@ a:hover {
   }
 
   .back_index {
-    width: 100%;
     display: inline-block;
     padding: 20px 50px;
     text-align: left;
 
     .btn {
+      width: 123px;
       display: block;
       border-radius: 20px;
       background-color: #eaeaea;
