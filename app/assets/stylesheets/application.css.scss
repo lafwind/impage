@@ -151,7 +151,17 @@ a:hover {
   height: 50px;
   padding-top: 25px;
   text-align: center;
-  text-decoration: underline;
+
+  .btn {
+    display: inline-block;
+    border-radius: 20px;
+    background-color: #e0f2f1;
+    color: #83c2af;
+  }
+
+  .btn:hover {
+    background-color: #d8f2f0;
+  }
 }
 
 .large_card {
@@ -234,4 +244,76 @@ a:hover {
     }
   }
 
+}
+
+.new_post {
+  background: #ffffff;
+  min-height: 250px;
+  color: #384953;
+
+  h3 {
+    padding: 20px 0;
+    text-align: center;
+    margin: 0;
+  }
+
+  .new_post_form {
+    width: 100%;
+    padding: 20px 50px;
+
+
+    .file {
+      display: inline-block;
+    }
+
+    input.file {
+      border: 0;
+    }
+
+    label {
+      width: 100px;
+      margin: 10px 0;
+    }
+
+    input {
+      border: 1px #eaeaea solid;
+    }
+
+    textarea {
+      display:block;
+      width: 100%;
+      padding-bottom: 50px;
+      border: 1px #eaeaea solid;
+    }
+
+    .btn {
+      display: block;
+      margin-top: 20px;
+      border-radius: 20px;
+      background-color: #eaeaea;
+      color: #999999;
+    }
+
+    .btn:hover {
+      background-color: #e1e1e1;
+    }
+  }
+
+  .back_index {
+    width: 100%;
+    display: inline-block;
+    padding: 20px 50px;
+    text-align: left;
+
+    .btn {
+      display: block;
+      border-radius: 20px;
+      background-color: #eaeaea;
+      color: #999999;
+    }
+
+    .btn:hover {
+      background-color: #e1e1e1;
+    }
+  }
 }

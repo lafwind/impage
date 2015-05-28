@@ -1,5 +1,7 @@
-%h1 New Post
+%div.new_post
+  %h3 New Post
 
-= render "shared/form"
+  = render "shared/form"
 
-= link_to "Back", root_path
+  %div.back_index
+    = button_to "Back", root_path, class: "btn"

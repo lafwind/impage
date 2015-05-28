@@ -1,5 +1,7 @@
-= simple_form_for @post do |f|
-  = f.input :image
-  = f.input :title
-  = f.input :description
-  = f.button :submit
+%div.new_post_form
+  = simple_form_for @post do |f|
+    %div.upload
+      = f.input :image
+    = f.input :title, label: "Name"
+    = f.input :description
+    = f.button :submit, class: "btn"
