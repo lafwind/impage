@@ -19,7 +19,7 @@
 
 $(document).ready( function() {
   setTimeout( function() {
-    $('notice-panel').fadeOut('slow', function(){
+    $('.notice-panel').fadeOut('slow', function(){
       $this.remove();
     });
   }, 1600);

@@ -68,7 +68,7 @@ a:hover {
   .alert {
     height: 100px;
     background-color: rgba(236, 181, 181, 0.2);
-    padding: 25px;
+    padding: 39px;;
     color: #e07575;
   }
 }
@@ -112,7 +112,7 @@ a:hover {
   padding: 50px 330px;
   width: 100%;
   min-width: 1330px;
-  min-height: 490px;
+  min-height: 100%;
   background-color: #eef3f5;
 }
 
@@ -189,6 +189,10 @@ a:hover {
   .btn:hover {
     background-color: #caede9;
   }
+}
+
+.nothing {
+  clear: both;
 }
 
 .large_card {
@@ -357,14 +361,57 @@ a:hover {
   }
 }
 
-// .edit_post {
-//   background: #ffffff;
-//   min-height: 350px;
-//   color: #384953;
-//
-//   h3 {
-//     padding: 20px 0;
-//     text-align: center;
-//     margin: 0;
-//   }
-// }
+.sign_up_page, .log_in {
+  background: #ffffff;
+  min-height: 350px;
+  color: #384953;
+
+  h3 {
+    padding: 20px 0;
+    text-align: center;
+    margin: 0;
+  }
+
+  .new_user_form, .login_form {
+    width: 100%;
+    padding: 20px 50px;
+
+
+    label {
+      width: 200px;
+      margin: 10px 0;
+    }
+
+    input {
+      width: 100%;
+      border: 1px #eaeaea solid;
+    }
+
+    input.boolean {
+      width: 20px;
+      float: left;
+      margin-top: 12px;
+      display: inline-block;
+      text-align: left;
+    }
+
+    .form_actions {
+      width: 100%;
+      display: block;
+      padding: 20px 50px;
+      text-align: center;
+
+      .btn {
+        width: 123px;
+        display: inline-block;
+        border-radius: 20px;
+        background-color: #eaeaea;
+        color: #999999;
+      }
+
+      .btn:hover {
+        background-color: #e1e1e1;
+      }
+    }
+  }
+}
