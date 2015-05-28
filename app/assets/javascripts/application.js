@@ -15,3 +15,12 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+
+$(document).ready( function() {
+  setTimeout( function() {
+    $('notice-panel').fadeOut('slow', function(){
+      $this.remove();
+    });
+  }, 1600);
+});

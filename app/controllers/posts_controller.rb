@@ -19,8 +19,10 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.build(post_params)
     if @post.save
+      flash[:notice] = "Create successful!"
       redirect_to @post
     else
+      flash[:alert] = "Some error!"
       render "new"
     end
   end
@@ -31,8 +33,10 @@ class PostsController < ApplicationController
   def update
     @post.update(post_params)
     if @post.save
+      flash[:notice] = "Update successful!"
       redirect_to @post
     else
+      flash[:alert] = "Some error!"
       render "edit"
     end
   end
