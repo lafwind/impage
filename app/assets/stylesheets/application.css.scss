@@ -38,7 +38,7 @@ body {
   margin: 0;
   padding: 0;
   @include box_sizing;
-  background-color: #f6f9fa;
+  background-color: #ffffff;
 }
 
 a {
@@ -93,6 +93,8 @@ a:hover {
 
 .content {
   padding: 50px 330px;
+  min-height: 490px;
+  background-color: #eef3f5;
 }
 
 .footer {
@@ -120,6 +122,7 @@ a:hover {
     background-color: #ffffff;
     border: 1px #e8eef0 solid;
     vertical-align: middle;
+    box-shadow: 0px 5px 10px #e1e1e1;
     p {
       padding-top: 20px;
       text-align: center;
@@ -149,4 +152,86 @@ a:hover {
   padding-top: 25px;
   text-align: center;
   text-decoration: underline;
+}
+
+.large_card {
+  width: 100%;
+  min-height: 390px;
+  color: #384953;
+
+  .large_card_title {
+    padding: 20px 0;
+    p {
+      font-size: 20px;
+    }
+    span {
+      color: #999999;
+    }
+
+  }
+
+  .large_card_image {
+    width: auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 5px 10px #e1e1e1;
+  }
+
+  .large_card_detail {
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .large_card_action {
+    float: left;
+    height: 30px;
+
+  }
+
+  .large_card_vote {
+    float: right;
+    height: 30px;
+  }
+
+  .large_card_comments {
+    clear: both;
+    padding-top: 20px;
+    color: #384953;
+
+    h3 {
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      border-bottom: 1px #e6e6e9 solid;
+    }
+
+    .comment {
+      padding-bottom: 10px;
+      .user {
+        color: #999999;
+      }
+
+      .comment_content {
+      }
+    }
+
+    .form {
+      padding-top: 30px;
+
+      textarea {
+        display:block;
+        width: 100%;
+        padding-bottom: 50px;
+        border: 1px #eaeaea solid;
+      }
+      .btn {
+        display: block;
+        margin-top: 20px;
+        border-radius: 20px;
+        background-color: #eaeaea;
+        color: #999999;
+      }
+    }
+  }
+
 }
