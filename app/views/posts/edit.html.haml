@@ -1,7 +1,10 @@
-%h1 Edit
+%div.edit_post
+  %h3 Edit Post
 
-= image_tag @post.image.url(:medium)
+  %div.edit_image
+    = image_tag @post.image.url(:medium)
 
-= render "shared/form"
+  = render "shared/form"
 
-= link_to "Back", root_path
+  %div.back_index
+    = link_to "Back", root_path, class: "btn"
