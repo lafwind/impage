@@ -10,6 +10,9 @@
       %p= "Like: #{post.get_likes.size}"
       %p= "Dislike #{post.get_dislikes.size}"
 
+%div.page
+  = will_paginate @posts
+
 -if user_signed_in?
   %div.index_new_post
     = link_to "New Post", new_post_path, class: "btn"

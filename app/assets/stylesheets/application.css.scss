@@ -415,3 +415,14 @@ a:hover {
     }
   }
 }
+
+.page {
+  clear: both;
+  .previous_page, .current {
+    color: #384953;
+  }
+
+  .next_page, .next {
+    color: #999999;
+  }
+}
