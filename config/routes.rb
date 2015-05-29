@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'static_pages/display'
+
   devise_for :users
   resources :posts do
     member do
@@ -7,6 +9,8 @@ Rails.application.routes.draw do
     end
     resources :comments
   end
+
+  get "display", to: "static_pages#display"
 
   root "posts#index"
 end
