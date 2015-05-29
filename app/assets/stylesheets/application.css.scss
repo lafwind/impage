@@ -361,7 +361,7 @@ a:hover {
   }
 }
 
-.sign_up_page, .log_in {
+.sign_up_page, .log_in, .edit_user_page {
   background: #ffffff;
   min-height: 350px;
   color: #384953;
@@ -372,7 +372,7 @@ a:hover {
     margin: 0;
   }
 
-  .new_user_form, .login_form {
+  .new_user_form, .login_form, .edit_form {
     width: 100%;
     padding: 20px 50px;
 
@@ -401,17 +401,17 @@ a:hover {
       padding: 20px 50px;
       text-align: center;
 
-      .btn {
-        width: 123px;
-        display: inline-block;
-        border-radius: 20px;
-        background-color: #eaeaea;
-        color: #999999;
-      }
+    }
+    .btn {
+      width: 123px;
+      display: inline-block;
+      border-radius: 20px;
+      background-color: #eaeaea;
+      color: #999999;
+    }
 
-      .btn:hover {
-        background-color: #e1e1e1;
-      }
+    .btn:hover {
+      background-color: #e1e1e1;
     }
   }
 }

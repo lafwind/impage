@@ -25,8 +25,8 @@
       = link_to dislike_post_path(@post) , class: "btn" do
         = "Dislike #{@post.get_dislikes.size}"
     -else
-      %p= "Like: #{@post.get_likes.size}"
-      %p= "Dislike #{@post.get_dislikes.size}"
+      %div.btn= "Like: #{@post.get_likes.size}"
+      %div.btn= "Dislike #{@post.get_dislikes.size}"
 
   %div.large_card_comments
     %h3= pluralize(@post.comments.count, "Comment")
