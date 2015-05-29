@@ -5,7 +5,11 @@ class PostsController < ApplicationController
   before_action :judge_user, only: [:edit, :update, :destroy]
 
   def index
-    @posts = Post.all.order("created_at DESC").paginate(page: params[:page])
+    if params[:tag]
+      @posts = Post.tagged_with(params[:tag]).order("created_at DESC").paginate(page: params[:page])
+    else
+      @posts = Post.all.order("created_at DESC").paginate(page: params[:page])
+    end
   end
 
   def show
@@ -63,7 +67,7 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.require(:post).permit(:title, :description, :image)
+      params.require(:post).permit(:title, :description, :image, :tag_list)
     end
 
     def judge_user

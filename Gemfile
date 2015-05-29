@@ -16,6 +16,7 @@ gem 'devise', '~> 3.4.1'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'bootstrap-sass', '~> 3.3.4.1'
 gem 'will_paginate', '~> 3.0.7'
+gem 'acts-as-taggable-on', '~> 3.5.0'
 
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc

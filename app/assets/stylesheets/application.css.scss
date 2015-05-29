@@ -50,6 +50,17 @@ a:hover {
   text-decoration:none;
 }
 
+.btn {
+  display: inline-block;
+  border-radius: 20px;
+  background-color: #eaeaea;
+  color: #999999;
+}
+
+.btn:hover {
+  background-color: #e1e1e1;
+}
+
 // notice-panel
 
 .notice-panel {
@@ -167,6 +178,16 @@ a:hover {
     .user {
       min-height: 50px;
     }
+    .btn {
+      display: inline-block;
+      border-radius: 20px;
+      background-color: #eaeaea;
+      color: #999999;
+    }
+
+    .btn:hover {
+      background-color: #e1e1e1;
+    }
   }
 }
 
@@ -201,6 +222,7 @@ a:hover {
   color: #384953;
 
   .large_card_title {
+    height: 108px;
     padding: 20px 0;
     p {
       font-size: 20px;
@@ -209,6 +231,15 @@ a:hover {
       color: #999999;
     }
 
+    .user {
+      display: inline-block;
+      padding-top: 8px;
+    }
+
+    .large_card_tags {
+      display: inline-block;
+      float: right;
+    }
   }
 
   .large_card_image {
