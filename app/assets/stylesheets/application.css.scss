@@ -101,7 +101,14 @@ a:hover {
       text-align: center;
       vertical-align: middle;
       font-size: 23px;
-      color: #384953;
+
+      a {
+        color: #384953;
+      }
+
+      a:hover {
+        color: #999999;
+      }
     }
 
     .header-item {
