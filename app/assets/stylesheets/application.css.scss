@@ -409,6 +409,19 @@ a:hover {
     margin: 0;
   }
 
+  .error_notification {
+    margin: 0 50px;
+    color: #e07575;
+  }
+
+  .error {
+    color: #e07575;
+  }
+
+  .error::before {
+    content: ' ';
+  }
+
   .new_user_form, .login_form, .edit_form {
     width: 100%;
     padding: 20px 50px;
