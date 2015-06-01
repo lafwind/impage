@@ -54,7 +54,7 @@ a:hover {
   display: inline-block;
   border-radius: 20px;
   background-color: #eaeaea;
-  color: #999999;
+  color: #666666;
 }
 
 .btn:hover {
@@ -204,7 +204,7 @@ a:hover {
       display: inline-block;
       border-radius: 20px;
       background-color: #eaeaea;
-      color: #999999;
+      color: #666666;
     }
 
     .btn:hover {
@@ -325,10 +325,27 @@ a:hover {
     display: inline-block;
     border-radius: 20px;
     background-color: #eaeaea;
-    color: #999999;
+    color: #666666;
   }
   .btn:hover {
     background-color: #e1e1e1;
+  }
+
+  .banner {
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-color: #eaeaea;
+    color: #999999;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    background-image: none;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 1.42857143;
   }
 }
 
@@ -387,7 +404,7 @@ a:hover {
       margin-top: 20px;
       border-radius: 20px;
       background-color: #eaeaea;
-      color: #999999;
+      color: #666666;
     }
 
     .btn:hover {
@@ -405,7 +422,7 @@ a:hover {
       display: block;
       border-radius: 20px;
       background-color: #eaeaea;
-      color: #999999;
+      color: #666666;
     }
 
     .btn:hover {
@@ -473,7 +490,7 @@ a:hover {
       display: inline-block;
       border-radius: 20px;
       background-color: #eaeaea;
-      color: #999999;
+      color: #666666;
     }
 
     .btn:hover {

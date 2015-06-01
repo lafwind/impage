@@ -14,6 +14,11 @@ class PostsController < ApplicationController
 
   def show
     @comments = @post.comments.all.order("created_at DESC")
+    if REDIS.sadd "#{Date.today.year}:#{Date.today.month}:#{Date.today.day}:posts:#{@post.id}:uniques", request.remote_ip
+      @views = REDIS.incr "imageviews:posts:#{@post.id}:views"
+    else
+      @views = REDIS.get "imageviews:posts:#{@post.id}:views"
+    end
   end
 
   def new
