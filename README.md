@@ -18,11 +18,23 @@
 
 ###### 界面
 
-![主界面1](/public/img/main1.png)
-![主界面2](/public/img/main2.png)
-![图片单独界面1](/public/img/show1.png)
-![图片单独界面2](/public/img/show2.png)
-![图片单独界面3](/public/img/show3.png)
-![新建](/public/img/new_post.png)
-![注册界面](/public/img/sign_up.png)
-![登录界面](/public/img/login.png)
+* 主界面1
+  ![主界面1](/public/img/main_1.png)
+* 主界面2
+  ![主界面2](/public/img/main_2.png)
+* show页面1
+  ![图片单独界面1](/public/img/show_1.png)
+* show页面2
+  ![图片单独界面2](/public/img/show_2.png)
+* 评论
+  ![图片单独界面3](/public/img/comments.png)
+* 新建
+  ![新建](/public/img/new_post.png)
+* 修改post
+  ![修改图片](/public/img/edit_post.png)
+* 注册
+  ![注册界面](/public/img/sign_up.png)
+* 登录
+  ![登录界面](/public/img/login.png)
+* 修改账户 
+  ![修改账户](/public/img/edit_account.png)
