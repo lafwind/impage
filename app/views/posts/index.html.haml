@@ -1,5 +1,11 @@
 - if @posts.empty?
-  %div.no_post No post now, come on, let's share ! no account? sign up !!!
+  - if user_signed_in?
+    %div.no_post No post now = =, come on, let's share !!!
+  - else
+    %div.no_post
+      %span No post now = =, no account?
+      %span= link_to "sign up", new_user_registration_path
+      %span !!!
 
 - @posts.each do |post|
   %div.card
