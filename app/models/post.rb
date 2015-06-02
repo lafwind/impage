@@ -9,4 +9,8 @@ class Post < ActiveRecord::Base
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
   self.per_page = 10
+
+  validates :title, presence: true
+  validates :image, presence: true
+
 end
