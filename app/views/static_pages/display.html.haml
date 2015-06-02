@@ -1,21 +1,46 @@
+%div.sort
+  - if params[:name] == "like"
+    %span= link_to "By Me",  display_path(name: "by_me"), class: "btn"
+    %span= link_to "Like",  display_path(name: "like"), class: "btn select"
+  - else
+    %span= link_to "By Me",  display_path(name: "by_me"), class: "btn select"
+    %span= link_to "Like",  display_path(name: "like"), class: "btn"
+
 - if @posts.empty?
   %div.no_post No post now, come on, let's share !!!
 
 - @posts.each do |post|
-  %div.card
-    %div.card_image
-      = image_tag post.image.url(:medium)
-      %p= link_to post.title, post_path(post)
-    %div.card_detail
-      %div.description
-        Description :
-        %p= post.description
-      %p= "Like : #{post.get_likes.size}"
-      %p= "Dislike : #{post.get_dislikes.size}"
+  - if params[:name] == "like"
+    - if current_user.voted_as_when_voted_for post
+      %div.card
+        %div.card_image
+          = image_tag post.image.url(:medium)
+          %p= link_to post.title, post_path(post)
+        %div.card_detail
+          %div.description
+            Description :
+            %p= post.description
+          %p= "Like : #{post.get_likes.size}"
+          %p= "Dislike : #{post.get_dislikes.size}"
 
-      %p Tags :
-      - post.tag_list.each do |tag|
-        = link_to "#{tag}", display_path(tag: tag), class: "btn"
+          %p Tags :
+          - post.tag_list.each do |tag|
+            = link_to "#{tag}", display_path(name: "like", tag: tag), class: "btn"
+  - else
+    %div.card
+      %div.card_image
+        = image_tag post.image.url(:medium)
+        %p= link_to post.title, post_path(post)
+      %div.card_detail
+        %div.description
+          Description :
+          %p= post.description
+        %p= "Like : #{post.get_likes.size}"
+        %p= "Dislike : #{post.get_dislikes.size}"
+
+        %p Tags :
+        - post.tag_list.each do |tag|
+          = link_to "#{tag}", display_path(name: "by_me", tag: tag), class: "btn"
 
 %div.page
   = will_paginate @posts

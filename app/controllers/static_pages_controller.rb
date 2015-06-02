@@ -3,17 +3,18 @@ class StaticPagesController < ApplicationController
 
   def display
     if params[:tag]
-      @posts = Post.where(user_id: current_user).tagged_with(params[:tag]).order("created_at DESC").paginate(page: params[:page])
+      if params[:name] == "like"
+        @posts = Post.tagged_with(params[:tag]).order("created_at DESC").paginate(page: params[:page])
+      else
+        @posts = Post.where(user_id: current_user).tagged_with(params[:tag]).order("created_at DESC").paginate(page: params[:page])
+      end
     else
-      @posts = Post.where(user_id: current_user).order("created_at DESC").paginate(page: params[:page])
+      if params[:name] == "like"
+        @posts = Post.order("created_at DESC").paginate(page: params[:page])
+      else
+        @posts = Post.where(user_id: current_user).order("created_at DESC").paginate(page: params[:page])
+      end
     end
   end
 
-  def like_list
-    if params[:tag]
-      @posts = Post.where(user_id: current_user).tagged_with(params[:tag]).order("created_at DESC").paginate(page: params[:page])
-    else
-      @posts = Post.where(user_id: current_user).order("created_at DESC").paginate(page: params[:page])
-    end
-  end
 end

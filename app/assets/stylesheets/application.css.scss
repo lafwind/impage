@@ -144,6 +144,17 @@ a:hover {
   text-align: center;
 }
 
+.sort {
+  margin: 10px;
+
+  .btn {
+    color: #999999;
+  }
+  .select {
+    color: #666666;
+  }
+}
+
 .no_post {
   margin: 10px;
   text-align: center;
