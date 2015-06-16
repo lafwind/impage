@@ -446,7 +446,7 @@ a:hover {
   }
 }
 
-.sign_up_page, .log_in, .edit_user_page {
+.sign_up_page, .log_in, .edit_user_page, .forget_pwd {
   background: #ffffff;
   min-height: 350px;
   color: #384953;
@@ -470,7 +470,7 @@ a:hover {
     content: ' ';
   }
 
-  .new_user_form, .login_form, .edit_form {
+  .new_user_form, .login_form, .edit_form, .forget_pwd_form {
     width: 100%;
     padding: 20px 50px;
 
@@ -501,7 +501,8 @@ a:hover {
 
     }
     .btn {
-      width: 123px;
+      width: auto;
+      padding: 5px 20px;
       display: inline-block;
       border-radius: 20px;
       background-color: #eaeaea;
