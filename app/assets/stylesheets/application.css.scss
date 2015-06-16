@@ -157,6 +157,52 @@ a:hover {
   }
 }
 
+
+.hero {
+  position: absolute;
+  top: 100px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+
+  .cover {
+    position: absolute;
+    width: 100%;
+    min-width:1330px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.0);
+  }
+
+
+  img {
+    width: 100%;
+    min-width:1330px;
+    height: 100%;
+    z-index: -9;
+  }
+
+  .welcome {
+    position: absolute;
+    top: 39%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+  }
+
+  a {
+    color: #fff;
+    display: inline-block;
+    border: 1px solid #fff;
+    margin: auto 5px;
+    padding: 5px 10px;
+  }
+}
+
 .no_post {
   margin: 10px;
   text-align: center;
