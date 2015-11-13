@@ -1,6 +1,9 @@
 class StaticPagesController < ApplicationController
   before_action :authenticate_user!, only: [:display]
 
+  def welcome
+  end
+
   def display
     if params[:tag]
       if params[:name] == "like"

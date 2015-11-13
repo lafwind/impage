@@ -10,5 +10,5 @@ Rails.application.routes.draw do
 
   get "display", to: "static_pages#display"
 
-  root "posts#index"
+  root "static_pages#welcome"
 end

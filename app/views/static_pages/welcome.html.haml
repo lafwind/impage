@@ -1,0 +1,24 @@
+-# - if user_signed_in?
+
+%div#background
+  %header.cf
+    %div.wrapper_wide
+      %a#logo(href="index.html") Impage
+      %nav
+        %ul
+          %li
+            %a(href="#") Explore
+          %li
+            %a(href="#") Log In
+          %li
+            = link_to "Sign Up", new_user_registration_path
+
+  %div.wrapper_skinny
+    %div.content
+      %h1 Sharing your image for the world!
+
+      %a.button.button_highlight(href="#") Join
+      %a.button.button_white(href="#") Explore
+
+    %footer
+      %p ©2015 Lafwind
