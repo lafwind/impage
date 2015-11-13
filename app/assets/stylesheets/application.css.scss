@@ -31,13 +31,18 @@ html, body {
 }
 
 header {
-    padding: 6vh 0;
+    padding: 8.5vh 0;
+    height: 3vh;
+    line-height: 3vh;
+    background-color: $highlight;
+    margin-bottom: 6rem;
+
     #logo {
         float: left;
         text-transform: uppercase;
         font-size: 1.5rem;
         font-weight: 700;
-        color: $dark;
+        color: $white;
         text-decoration: none;
     }
     nav {
@@ -49,14 +54,14 @@ header {
                 display: inline-block;
                 margin-left: 2.5rem;
                 padding-bottom: 0.2rem;
-                border-bottom: 0 $dark solid;
                 a {
                     display: inline-block;
+                    border-bottom: 0 $dark solid;
                     padding-bottom: 0.2rem;
-                    color: $dark;
+                    color: $white;
                     text-decoration: none;
                     &:hover {
-                        border-bottom: 1px $dark solid;
+                        border-bottom: 1px $white solid;
                     }
                 }
             }
@@ -73,38 +78,13 @@ header {
 footer {
     // padding-bottom: 1rem;
     // margin-top: 3rem;
+    color: $dark;
     text-align: center;
-    p {
-        color: $dark;
-    }
+    box-sizing: border-box;
+    padding-top: 1.5rem;
+    height: 5rem;
 }
 
-form {
-    width: 50%;
-    margin: 0 auto;
-    .field {
-        margin: 1rem auto;
-        label {
-            display: block;
-            margin: 0.5rem auto;
-            color: $dark;
-        }
-        input[type="email"], input[type="password"], textarea {
-            box-sizing: border-box;
-            width: 100%;
-            padding: .5rem .5rem;
-            outline: none;
-            border: 1px solid lighten($dark, 50%);
-            transition: all .3s ease-in-out;
-            &:focus {
-                box-shadow: 0 0 1rem lighten($dark, 50%);
-            }
-        }
-    }
-    .actions {
-        margin-top: 3rem;
-    }
-}
 
 form + footer {
     margin-top: 9rem;
@@ -149,5 +129,6 @@ form + footer {
 
 // @import './responsive_main.scss';
 @import './welcome.css.scss';
+@import './form.css.scss';
 // @import './responsive_index.scss';
 @import './normalize.css';

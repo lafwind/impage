@@ -1,12 +1,19 @@
-%div.header-bar
-  %div.header-logo
-    = link_to "Impage", root_path
+%header.cf
+  %div.wrapper_wide
+    %div.header-logo
+      = link_to "Impage", root_path, id: "logo"
 
-  %div.header-item
-    - if user_signed_in?
-      = link_to "Display", display_path
-      = link_to "Edit", edit_user_registration_path
-      = link_to "Log Out", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure" }
-    - else
-      = link_to "Sign Up", new_user_registration_path
-      = link_to "Log In", new_user_session_path
+    %nav
+      %ul
+        - if user_signed_in?
+          %li
+            = link_to "Display", display_path
+          %li
+            = link_to "Edit", edit_user_registration_path
+          %li
+            = link_to "Log Out", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure" }
+        - else
+          %li
+            = link_to "Explore", display_path
+          -# = link_to "Sign Up", new_user_registration_path
+          -# = link_to "Log In", new_user_session_path

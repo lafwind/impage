@@ -4,7 +4,7 @@
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= f.error_notification %>
 
-    <div class="edit_form">
+    <div class="field">
       <%= f.input :name, required: true, autofocus: true %>
       <%= f.input :email, required: true %>
 
@@ -15,11 +15,13 @@
       <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
       <%= f.input :password_confirmation, required: false %>
       <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
-      <div class="form_actions">
-        <%= f.button :submit, "Update", class: "btn" %>
+      <div class="actions">
+        <%= f.button :submit, "Update", class: "button button_highlight" %>
+        <p>
+          <%= link_to "Back", :back %>
+        </p>
       </div>
 
-      <%= link_to "Back", :back %>
     </div>
 
   <% end %>
