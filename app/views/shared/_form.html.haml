@@ -1,8 +1,10 @@
 %div.new_post_form
   = simple_form_for @post do |f|
-    %div.upload
-      = f.input :image
-    = f.input :title, label: "Name"
-    = f.input :tag_list, label: "Tags", placeholder: " Separated by space "
-    = f.input :description
-    = f.button :submit, class: "btn"
+    %div.field
+      %div.upload
+        = f.input :image
+      = f.input :title, label: "Name"
+      = f.input :tag_list, label: "Tags", placeholder: " Separated by space "
+      = f.input :description
+    %div.actions
+      = f.button :submit, class: "button button_highlight"

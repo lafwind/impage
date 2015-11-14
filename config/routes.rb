@@ -10,5 +10,9 @@ Rails.application.routes.draw do
 
   get "display", to: "static_pages#display"
 
+  authenticated :user do
+    root 'static_pages#display', as: 'authenticated_root'
+  end
+
   root "static_pages#welcome"
 end

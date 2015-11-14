@@ -17,25 +17,25 @@
   %div.card
     %div.card_image
       = image_tag post.image.url(:medium)
-      %p= link_to post.title, post_path(post)
     %div.card_detail
       %div.description
-        Description :
-        %p= post.description
+        %span.title= link_to post.title, post_path(post)
+        \-
+        %span.desc= post.description
       %div.user
         By :
-        %p= post.user.email
-      %p= "Like : #{post.get_likes.size}"
-      %p= "Dislike : #{post.get_dislikes.size}"
+        %span= link_to "#{post.user.name.capitalize}", post_path(post)
+      %span= "Like : #{post.get_likes.size}"
+      %span= "Dislike : #{post.get_dislikes.size}"
 
-      %p Tags :
+      %span Tags :
       - post.tag_list.each do |tag|
-        = link_to "#{tag}", root_path(tag: tag), class: "btn"
+        = link_to "#{tag}", root_path(tag: tag), class: "button tag"
 %div.page
   = will_paginate @posts
 
 -if user_signed_in?
   %div.index_new_post
-    = link_to "New Post", new_post_path, class: "btn"
+    = link_to "New Post", new_post_path, class: "button button_highlight"
 -else
   %div.nothing

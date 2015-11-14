@@ -10,22 +10,27 @@
     header {
         padding: 8.5vh 0;
         height: 3vh;
+        line-height: 3vh;
         background-color: rgba(0, 0, 0, 0.1);
         margin-bottom: 0;
 
         #logo {
             color: $white;
             letter-spacing: .1rem;
+            font-weight: 700;
         }
 
         nav {
             ul {
                 li {
+                    margin-left: 2.5rem;
                     border-bottom: 0 $white solid;
                     a {
+                        padding: 0;
                         color: $white;
                         &:hover {
                             border-bottom: 1px $white solid;
+                            background-color: transparent;
                         }
                     }
                 }

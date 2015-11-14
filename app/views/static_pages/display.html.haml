@@ -1,52 +1,59 @@
-%div.sort
-  - if params[:name] == "like"
-    %span= link_to "By Me",  display_path(name: "by_me"), class: "btn"
-    %span= link_to "Like",  display_path(name: "like"), class: "btn select"
-  - else
-    %span= link_to "By Me",  display_path(name: "by_me"), class: "btn select"
-    %span= link_to "Like",  display_path(name: "like"), class: "btn"
+= render "shared/header"
 
-- if @posts.empty?
-  %div.no_post No post now, come on, let's share !!!
+%div.showroom
 
-- @posts.each do |post|
-  - if params[:name] == "like"
-    - if current_user.voted_as_when_voted_for post
-      %div.card
-        %div.card_image
-          = image_tag post.image.url(:medium)
-          %p= link_to post.title, post_path(post)
-        %div.card_detail
-          %div.description
-            Description :
-            %p= post.description
-          %p= "Like : #{post.get_likes.size}"
-          %p= "Dislike : #{post.get_dislikes.size}"
+  %div.sort
+    - if params[:name] == "like"
+      %span= link_to "By Me",  display_path(name: "by_me"), class: "btn"
+      %span= link_to "Like",  display_path(name: "like"), class: "btn select"
+    - else
+      %span= link_to "By Me",  display_path(name: "by_me"), class: "btn select"
+      %span= link_to "Like",  display_path(name: "like"), class: "btn"
 
-          %p Tags :
-          - post.tag_list.each do |tag|
-            = link_to "#{tag}", display_path(name: "like", tag: tag), class: "btn"
-  - else
-    %div.card
-      %div.card_image
-        = image_tag post.image.url(:medium)
-        %p= link_to post.title, post_path(post)
-      %div.card_detail
-        %div.description
-          Description :
-          %p= post.description
-        %p= "Like : #{post.get_likes.size}"
-        %p= "Dislike : #{post.get_dislikes.size}"
+  - if @posts.empty?
+    %div.no_post No post now, come on, let's share !!!
 
-        %p Tags :
-        - post.tag_list.each do |tag|
-          = link_to "#{tag}", display_path(name: "by_me", tag: tag), class: "btn"
+  %div.card_stream
+    - @posts.each do |post|
+      - if params[:name] == "like"
+        - if current_user.voted_as_when_voted_for post
+          %div.card
+            %div.card_image
+              = image_tag post.image.url(:medium)
+            %div.card_detail
+              %div.description
+                %span.title= link_to post.title, post_path(post)
+                \-
+                %span.desc= post.description
+              %span= "Like : #{post.get_likes.size}"
+              %span= "Dislike : #{post.get_dislikes.size}"
 
-%div.page
-  = will_paginate @posts
+              %p Tags :
+              - post.tag_list.each do |tag|
+                = link_to "#{tag}", display_path(name: "like", tag: tag), class: "button tag"
+      - else
+        %div.card
+          %div.card_image
+            = image_tag post.image.url(:medium)
+          %div.card_detail
+            %div.description
+              %span.title= link_to post.title, post_path(post)
+              \-
+              %span.desc= post.description
+            %span= "Like : #{post.get_likes.size}"
+            %span "Dislike : #{post.get_dislikes.size}"
 
--if user_signed_in?
-  %div.index_new_post
-    = link_to "New Post", new_post_path, class: "btn"
--else
-  %div.nothing
+            %span Tags :
+            - post.tag_list.each do |tag|
+              = link_to "#{tag}", display_path(name: "by_me", tag: tag), class: "button tag"
+
+  %div.page
+    = will_paginate @posts
+
+  -if user_signed_in?
+    %div.index_new_post
+      = link_to "New Post", new_post_path, class: "button button_highlight"
+  -else
+    %div.nothing
+
+= render "shared/footer"
