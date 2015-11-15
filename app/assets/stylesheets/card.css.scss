@@ -1,0 +1,118 @@
+.card {
+    text-align: center;
+    margin-bottom: 5rem;
+    .card_detail {
+        margin: 2rem auto;
+        color: lighten($dark, 5%);
+
+        .description {
+            margin-bottom: 1rem;
+            span {
+                display: inline-block;
+                font-size: 1.3rem;
+            }
+
+            .title {
+                a {
+                    text-decoration: none;
+                    color: lighten($highlight, 0%);
+                    letter-spacing: .05rem;
+                }
+            }
+
+            .desc {
+                color: lighten($dark, 15%);
+                letter-spacing: .05rem;
+            }
+        }
+
+        .user {
+            margin-bottom: 1rem;
+            span {
+                a {
+		    display: inline-block;
+                    text-decoration: none;
+                    color: darken($dark, 5%);
+                }
+            }
+        }
+
+        span {
+            margin-right: .5rem;
+        }
+    }
+}
+
+.large_card {
+    .large_card_title {
+        display: inline-block;
+        position: absolute;
+        z-index: 999;
+        color: darken($white, 30%);
+        top: 4rem;
+        left: 5rem;
+
+        span {
+            display: inline-block;
+            margin-bottom: .5rem;
+        }
+    }
+
+    .large_card_action {
+        display: inline-block;
+        position: absolute;
+        top: 4rem;
+        right: 5rem;
+        z-index: 999;
+
+        a, span {
+            font-size: 1.29rem;
+            text-decoration: none;
+            color: darken($white, 30%);
+            display: inline-block;
+
+            &:hover {
+                color: darken($white, 0%);
+            }
+        }
+
+        span + .size {
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        span.icon-heart, span.icon-heart + .size {
+            color: $highlight;
+        }
+
+        span.icon-heart-o {
+            &:hover {
+                color: $highlight;
+            }
+        }
+
+        span {
+            margin-left: .5rem;
+            padding: .39rem .9rem;
+            padding-right: 0;
+        }
+    }
+
+    .large_card_image {
+        img {
+            width: 100vw;
+            height: 100vh;
+        }
+    }
+}
+
+.tag {
+    padding: .3rem 1rem;
+    margin: 0 .3rem;
+    min-width: 2rem;
+    background-color: lighten($dark, 39%);
+
+    &:hover {
+        background-color: lighten($dark, 19%);
+    }
+}

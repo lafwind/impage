@@ -4,7 +4,8 @@
     %title Impage
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
-    = csrf_meta_tags
+    %script{ :src  => "https://use.fonticons.com/d72cf251.js" }
+  = csrf_meta_tags
   %body
 
     %div.notice-panel
@@ -13,13 +14,13 @@
       -if alert
         %p.alert= alert
 
-    - unless current_page?(root_path) || current_page?(display_path)
+    - unless current_page?(root_path) || current_page?(display_path) || (params[:controller] == 'posts' && params[:action] == 'show')
       %div.header
         = render "shared/header"
 
     %div.page_content
       = yield
 
-    - unless current_page?(root_path) || current_page?(display_path)
+    - unless current_page?(root_path) || current_page?(display_path) || (params[:controller] == 'posts' && params[:action] == 'show')
       %div.footer
         = render "shared/footer"

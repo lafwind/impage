@@ -1,44 +1,54 @@
 %div.large_card
   %div.large_card_title
-    %p= @post.title
+    %span= @post.title
     %div.user
       %span by
       %span= @post.user.email
-    %div.large_card_tags
-      - @post.tag_list.each do |tag|
-        = link_to "#{tag}", root_path(tag: tag), class: "btn"
-  %div.large_card_image
-    = image_tag @post.image.url(:large)
-  %div.large_card_detail
-    %p= @post.description
-
-
+    -# %div.large_card_tags
+    -#   - @post.tag_list.each do |tag|
+    -#     = link_to "#{tag}", root_path(tag: tag), class: "button tag"
 
   %div.large_card_action
-    = link_to "Back", root_path, class: "btn"
+    = link_to root_path do
+      %span.icon.icon-home
 
     - if @post.user == current_user
-      = link_to "Edit", edit_post_path(@post), class: "btn"
-      = link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class: "btn"
+      = link_to edit_post_path(@post) do
+        %span.icon.icon-pencil
+      = link_to post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class: "btn" do
+        %span.icon.icon-times
 
-  %div.large_card_vote
-    %span.banner= "Views : #{@views}"
     - if user_signed_in?
-      = link_to like_post_path(@post), class: "btn", method: :get do
-        = "Like : #{@post.get_likes.size}"
-      = link_to dislike_post_path(@post) , class: "btn" do
-        = "Dislike : #{@post.get_dislikes.size}"
+      - if current_user.liked? @post
+        = link_to dislike_post_path(@post) do
+          %span.icon.icon-heart
+          %span.size= @post.get_likes.size
+      - else
+        = link_to like_post_path(@post), method: :get do
+          %span.icon.icon-heart-o
+          %span.size= @post.get_likes.size
     -else
-      %div.banner= "Like : #{@post.get_likes.size}"
-      %div.banner= "Dislike : #{@post.get_dislikes.size}"
+      %span.icon.icon-heart-o
+      %span.size= @post.get_likes.size
 
-  %div.large_card_comments
-    %h3= pluralize(@post.comments.count, "Comment")
+    %span.icon.icon-bar-chart
+    %span.size= @views
 
-    - @comments.each do |comment|
-      %div.comment
-        %span.user= comment.user.email
-        %span :
-        %span.comment_content= comment.content
+  %div.large_card_image
+    = image_tag @post.image.url(:large)
+  -# %div.large_card_detail
+  -#   %p= @post.description
 
-    = render "comments/comment_form"
+
+
+
+  -# %div.large_card_comments
+  -#   %h5= pluralize(@post.comments.count, "Comment")
+
+  -#   - @comments.each do |comment|
+  -#     %div.comment
+  -#       %span.user= comment.user.email
+  -#       %span :
+  -#       %span.comment_content= comment.content
+
+  -#   = render "comments/comment_form"
