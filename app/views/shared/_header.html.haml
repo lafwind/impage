@@ -8,7 +8,7 @@
       %ul
         - if user_signed_in?
           %li
-            = link_to "Explore", posts_path
+            = link_to "Explore", posts_path, class: "#{'select' if params[:controller] == 'posts' && params[:action] == 'index'}"
           %li
             = link_to "Show Room", root_path
           %li
