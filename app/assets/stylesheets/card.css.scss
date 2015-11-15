@@ -12,6 +12,7 @@
                 font-size: 1.3rem;
             }
 
+
             .title {
                 a {
                     text-decoration: none;
@@ -25,6 +26,16 @@
                 letter-spacing: .05rem;
             }
         }
+
+        a {
+            text-decoration: none;
+            color: $highlight;
+        }
+
+        .tag {
+            color: $white;
+        }
+
 
         .user {
             margin-bottom: 1rem;
@@ -114,5 +125,21 @@
 
     &:hover {
         background-color: lighten($dark, 19%);
+    }
+}
+
+span.icon-tags {
+    margin-left: 2rem;
+    color: lighten($dark, 19%);
+    font-size: 1rem;
+}
+
+span.icon-heart, span.icon-heart + .size {
+    color: $highlight;
+}
+
+span.icon-heart-o {
+    &:hover {
+        color: $highlight;
     }
 }
