@@ -68,57 +68,73 @@
 }
 
 .large_card {
-    .large_card_title {
-        display: inline-block;
+    .large_card_header {
+        box-sizing: border-box;
         position: absolute;
         z-index: 999;
-        color: darken($white, 30%);
-        top: 4rem;
-        left: 5rem;
+        width: 100%;
+        height: 15vh;
+        background-color: rgba(0, 0, 0, 0.15);
+        color: darken($white, 20%);
 
-        span {
+        .large_card_title {
+            box-sizing: border-box;
             display: inline-block;
-            margin-bottom: .5rem;
-        }
-    }
+            height: 15vh;
+            line-height: 15vh;
+            padding-right: 5vw;
+            width: 30vw;
+            padding-left: 5rem;
+            span {
+                display: inline-block;
+                /* margin-bottom: .5rem; */
+            }
 
-    .large_card_action {
-        display: inline-block;
-        position: absolute;
-        top: 4rem;
-        right: 5rem;
-        z-index: 999;
-
-        a, span {
-            font-size: 1.29rem;
-            text-decoration: none;
-            color: darken($white, 30%);
-            display: inline-block;
-
-            &:hover {
-                color: darken($white, 0%);
+            .user {
+                padding-left: 1rem;
             }
         }
 
-        span + .size {
-            margin-left: 0;
-            padding-left: 0;
-        }
+        .large_card_action {
+            box-sizing: border-box;
+            width: 69vw;
+            text-align: right;
+            padding-right: 5rem;
+            display: inline-block;
+            /* height: 15vh; */
+            /* line-height: 15vh; */
+            a, span {
+                font-size: 1.29rem;
+                text-decoration: none;
+                color: darken($white, 20%);
+                display: inline-block;
 
-        span.icon-heart, span.icon-heart + .size {
-            color: $highlight;
-        }
-
-        span.icon-heart-o {
-            &:hover {
-                color: $highlight;
+                &:hover {
+                    color: $white;
+                }
             }
-        }
 
-        span {
-            margin-left: .5rem;
-            padding: .39rem .9rem;
-            padding-right: 0;
+            span + .size {
+                margin-left: 0;
+                padding-left: 0;
+                font-size: .9rem;
+            }
+
+            span.icon-heart, span.icon-heart + .size {
+                color: lighten($highlight, 5%);
+            }
+
+            span.icon-heart-o {
+                &:hover {
+                    color: $highlight;
+                }
+            }
+
+            span {
+                margin-left: .5rem;
+                padding: .39rem .9rem;
+                padding-right: 0;
+            }
         }
     }
 
