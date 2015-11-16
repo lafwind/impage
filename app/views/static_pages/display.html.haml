@@ -19,7 +19,8 @@
         - if current_user.voted_as_when_voted_for post
           %div.card
             %div.card_image
-              = image_tag post.image.url(:medium)
+              = link_to post_path(post) do
+                = image_tag post.image.url(:medium)
             %div.card_detail
               %div.description
                 %span.title= link_to post.title, post_path(post)
@@ -41,7 +42,8 @@
       - else
         %div.card
           %div.card_image
-            = image_tag post.image.url(:medium)
+            = link_to post_path(post) do
+              = image_tag post.image.url(:medium)
           %div.card_detail
             %div.description
               %span.title= link_to post.title, post_path(post)

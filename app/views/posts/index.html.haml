@@ -16,7 +16,8 @@
 - @posts.each do |post|
   %div.card
     %div.card_image
-      = image_tag post.image.url(:medium)
+      = link_to post_path(post) do
+        = image_tag post.image.url(:medium)
     %div.card_detail
       %div.description
         %span.title= link_to post.title, post_path(post)
@@ -26,7 +27,7 @@
         By :
         %span= link_to "#{post.user.name.capitalize}", post_path(post)
 
-      - if current_user.liked? post
+      - if (!current_user.nil?) && (current_user.liked? post)
         = link_to dislike_post_path(post) do
           %span.icon.icon-heart
           %span.size= post.get_likes.size

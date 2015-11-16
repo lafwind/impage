@@ -121,6 +121,20 @@ header {
 
 }
 
+.edit_post {
+    .edit_image {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+        img {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 3rem;
+            box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.39);
+        }
+    }
+}
+
 .index_new_post {
     text-align: center;
 }
