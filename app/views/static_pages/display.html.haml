@@ -11,7 +11,7 @@
       %span= link_to "Like",  display_path(name: "like"), class: "btn"
 
   - if @posts.empty?
-    %div.no_post No post now, come on, let's share !!!
+    %h3.no_post No post now, come on, let's share !!!
 
   %div.card_stream
     - @posts.each do |post|

@@ -142,6 +142,9 @@ header {
 .showroom{
     min-height: 66vh;
 
+    h3.no_post {
+        margin-bottom: 0;
+    }
     .sort {
         margin-bottom: 3rem;
         text-align: center;
@@ -163,7 +166,7 @@ header {
     }
 
     .card_stream {
-        min-height: 39vh;
+        min-height: 36vh;
     }
 }
 
