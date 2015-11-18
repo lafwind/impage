@@ -8,11 +8,11 @@
   = csrf_meta_tags
   %body
 
-    %div.notice-panel
-      -if notice
-        %p.notice= notice
-      -if alert
-        %p.alert= alert
+    -# %div.notice-panel
+    -#   -if notice
+    -#     %p.notice= notice
+    -#   -if alert
+    -#     %p.alert= alert
 
     - unless current_page?(root_path) || current_page?(display_path) || (params[:controller] == 'posts' && params[:action] == 'show')
       %div.header

@@ -10,7 +10,7 @@
     -#     = link_to "#{tag}", root_path(tag: tag), class: "button tag"
 
     %div.large_card_action
-      = link_to root_path do
+      = link_to posts_path do
         %span.icon.icon-home
 
       - if @post.user == current_user

@@ -12,6 +12,9 @@
 -#         %span !!!
 
 
+- if @posts.empty?
+  %h3.no_post No post now, come on, let's share !!!
+
 
 - @posts.each do |post|
   %div.card

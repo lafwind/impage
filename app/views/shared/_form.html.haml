@@ -2,7 +2,7 @@
   = simple_form_for @post do |f|
     %div.field
       %div.upload
-        = f.input :image
+        = f.file_field :image
       = f.input :title, label: "Name"
       = f.input :tag_list, label: "Tags", placeholder: " Separated by space "
       = f.input :description
