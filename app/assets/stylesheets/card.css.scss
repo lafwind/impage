@@ -94,7 +94,16 @@
             }
 
             .user {
-                padding-left: 1rem;
+                padding-left: .5rem;
+
+                .name {
+                    padding-left: .5rem;
+                    a {
+                        font-size: 1.2rem;
+                        text-decoration: none;
+                        color: darken($white, 10%);
+                    }
+                }
             }
         }
 

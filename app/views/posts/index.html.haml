@@ -28,7 +28,7 @@
         %span.desc= post.description
       %div.user
         By :
-        %span= link_to "#{post.user.name.capitalize}", post_path(post)
+        %span= link_to "#{post.user.name.capitalize}", user_path(post.user_id)
 
       - if (!current_user.nil?) && (current_user.liked? post)
         = link_to dislike_post_path(post) do

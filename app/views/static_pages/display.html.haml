@@ -4,11 +4,11 @@
 
   %div.sort
     - if params[:name] == "like"
-      %span= link_to "By Me",  display_path(name: "by_me"), class: "btn"
-      %span= link_to "Like",  display_path(name: "like"), class: "btn select"
+      %span= link_to "By Me",  display_path(name: "by_me")
+      %span= link_to "Like",  display_path(name: "like"), class: "select"
     - else
-      %span= link_to "By Me",  display_path(name: "by_me"), class: "btn select"
-      %span= link_to "Like",  display_path(name: "like"), class: "btn"
+      %span= link_to "By Me",  display_path(name: "by_me"), class: "select"
+      %span= link_to "Like",  display_path(name: "like")
 
   - if @posts.empty?
     %h3.no_post No post now, come on, let's share !!!
@@ -26,6 +26,9 @@
                 %span.title= link_to post.title, post_path(post)
                 \-
                 %span.desc= post.description
+              %div.user
+                By :
+                %span= link_to "#{post.user.name.capitalize}", user_path(post.user_id)
 
               - if current_user.liked? post
                 = link_to dislike_post_path(post) do
@@ -49,6 +52,10 @@
               %span.title= link_to post.title, post_path(post)
               \-
               %span.desc= post.description
+            %div.user
+              By :
+              %span= link_to "#{post.user.name.capitalize}", user_path(post.user_id)
+
             - if current_user.liked? post
               = link_to dislike_post_path(post) do
                 %span.icon.icon-heart
