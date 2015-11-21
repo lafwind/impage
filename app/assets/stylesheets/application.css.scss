@@ -152,7 +152,6 @@ header {
             display: inline-block;
             padding: 0 1rem;
             a {
-                /* padding-bottom: .2rem; */
                 font-size: 1.2rem;
                 text-decoration: none;
                 color: lighten($dark, 39%);
@@ -160,7 +159,6 @@ header {
 
             .select {
                 color: lighten($highlight, 10%);
-                /* border-bottom: 1px lighten($highlight, 10%) solid; */
             }
         }
     }
@@ -228,9 +226,7 @@ form + footer {
 
 
 
-// @import './responsive_main.scss';
 @import './welcome.css.scss';
 @import './form.css.scss';
 @import './card.css.scss';
-// @import './responsive_index.scss';
 @import './normalize.css';

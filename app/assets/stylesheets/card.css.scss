@@ -11,9 +11,7 @@
             margin: 0 auto;
             margin-bottom: 3rem;
             transition: all .3s ease-in-out;
-            &:hover {
-                box-shadow: 0 0 5rem 0 rgba(0, 0, 0, 0.50);
-            }
+            box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.30);
         }
     }
 
@@ -90,7 +88,6 @@
             padding-left: 5rem;
             span {
                 display: inline-block;
-                /* margin-bottom: .5rem; */
             }
 
             .user {
@@ -113,8 +110,6 @@
             text-align: right;
             padding-right: 5rem;
             display: inline-block;
-            /* height: 15vh; */
-            /* line-height: 15vh; */
             a, span {
                 font-size: 1.29rem;
                 text-decoration: none;
