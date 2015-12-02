@@ -14,6 +14,17 @@ form {
             color: $dark;
         }
 
+	.upload {
+            margin-bottom: 1.5rem;
+	    label {
+		display: inline-block;
+		margin-right: 1rem;
+	    }
+	    label + input {
+		color: lighten($dark, 30%);
+	    }
+	}
+
         input[type="text"], input[type="email"], input[type="password"], textarea {
             box-sizing: border-box;
             width: 100%;
@@ -36,15 +47,6 @@ form {
             color: lighten($dark, 30%);
         }
 
-	.upload {
-	    label {
-		display: inline-block;
-		margin-right: 1rem;
-	    }
-	    label + input {
-		color: lighten($dark, 30%);
-	    }
-	}
 
 	.hint {
 	    display: inline-block;

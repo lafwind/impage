@@ -4,6 +4,7 @@ $dark: #36495e;
 
 html, body {
     box-sizing: border-box !important;
+    background-color: darken($white, 2%);
 }
 
 .wrapper {
@@ -32,10 +33,10 @@ html, body {
 
 header {
     // padding: 3vh 0;
-    height: 8vh;
-    line-height: 8vh;
+    height: 10vh;
+    line-height: 10vh;
     background-color: $highlight;
-    margin-bottom: 8rem;
+    // margin-bottom: 8rem;
 
     .bar_line {
         position: fixed;
@@ -90,7 +91,15 @@ header {
     }
 }
 
+.divide {
+    height: 8rem;
+}
+.nothing {
+    height: 5rem;
+}
+
 .page_content {
+    background-color: darken($white, 2%);
     min-height: 66vh;
 
     h3, h5 {
@@ -121,17 +130,39 @@ header {
 
 }
 
-.edit_post {
+.page_content > .edit_post {
+    width: 50%;
+    margin: 0 auto;
+    border: 1px darken($white, 10%) solid;
+    background-color: $white;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     .edit_image {
         display: block;
-        width: 50%;
         margin: 0 auto;
         img {
             display: block;
             margin: 0 auto;
             margin-bottom: 3rem;
-            box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.39);
+            // box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.39);
         }
+    }
+
+    form {
+        width: 80%;
+    }
+
+}
+
+.page_content > .new_post, .page_content > .edit_user_page {
+    width: 50%;
+    margin: 0 auto;
+    border: 1px darken($white, 10%) solid;
+    background-color: $white;
+    padding-top: 3rem;
+
+    form {
+        width: 80%;
     }
 }
 
@@ -177,6 +208,7 @@ header {
 footer {
     // padding-bottom: 1rem;
     // margin-top: 3rem;
+    background-color: darken($white, 2%);
     color: $dark;
     text-align: center;
     box-sizing: border-box;

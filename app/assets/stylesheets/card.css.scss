@@ -1,22 +1,29 @@
 .card {
-    text-align: center;
+    width: 50%;
+    margin: 0 auto;
     margin-bottom: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    border: 1px darken($white, 10%) solid;
+    background-color: $white;
+
+    text-align: center;
 
     .card_image {
         display: block;
-        width: 50%;
-        margin: 0 auto;
+        // width: 50%;
+        // margin: 0 auto;
         img {
             display: block;
             margin: 0 auto;
             margin-bottom: 3rem;
             transition: all .3s ease-in-out;
-            box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.30);
+            // box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.30);
         }
     }
 
     .card_detail {
-        margin: 2rem auto;
         color: lighten($dark, 5%);
 
         .description {
@@ -75,7 +82,7 @@
         z-index: 999;
         width: 100%;
         height: 15vh;
-        background-color: rgba(0, 0, 0, 0.15);
+        background-color: rgba(20, 20, 20, 0.39);
         color: darken($white, 20%);
 
         .large_card_title {
