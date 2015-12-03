@@ -174,12 +174,17 @@
     padding: .3rem 1rem;
     margin: 0 .3rem;
     min-width: 2rem;
-    background-color: lighten($dark, 39%);
+    color: lighten($dark, 39%) !important;
+    border: 1.5px lighten($dark, 39%) solid;
+    font-size: .9rem;
 
     &:hover {
-        background-color: lighten($dark, 19%);
+        border: 1.5px lighten($dark, 19%) solid;
+        color: lighten($dark, 19%) !important;
     }
 }
+
+.tag
 
 span.icon-tags {
     margin-left: 2rem;

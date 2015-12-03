@@ -23,5 +23,9 @@
 *~
 *swp
 
+
+/dump.rdb
+
+
 # Ignore application configuration
 /config/application.yml
