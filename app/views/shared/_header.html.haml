@@ -5,8 +5,8 @@
       = link_to "Impage", root_path, id: "logo"
 
     %nav
-      %ul
-        - if user_signed_in?
+      - if user_signed_in?
+        %ul
           %li
             = link_to "Explore", posts_path, class: "#{'select' if params[:controller] == 'posts' && params[:action] == 'index'}"
           %li
@@ -17,7 +17,8 @@
             = link_to "Account", edit_user_registration_path, class: "#{'select' if params[:controller] == 'devise/registrations' && params[:action] == 'edit'}"
           %li
             = link_to "Log Out", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure" }
-        - else
+      - else
+        %ul
           %li
             = link_to "Explore", posts_path, class: "#{'select' if params[:controller] == 'posts' && params[:action] == 'index'}"
           %li

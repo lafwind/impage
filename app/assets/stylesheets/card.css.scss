@@ -1,3 +1,5 @@
+@import './application.css.scss';
+
 .card {
     width: 50%;
     margin: 0 auto;
@@ -134,11 +136,11 @@
                 font-size: .9rem;
             }
 
-            span.icon-heart, span.icon-heart + .size {
+            span.fa-heart, span.fa-heart + .size {
                 color: lighten($highlight, 5%);
             }
 
-            span.icon-heart-o {
+            span.fa-heart-o {
                 &:hover {
                     color: $highlight;
                 }
@@ -186,17 +188,17 @@
 
 .tag
 
-span.icon-tags {
+span.fa-tags {
     margin-left: 2rem;
     color: lighten($dark, 19%);
     font-size: 1rem;
 }
 
-span.icon-heart, span.icon-heart + .size {
+span.fa-heart, span.fa-heart + .size {
     color: $highlight;
 }
 
-span.icon-heart-o {
+span.fa-heart-o {
     &:hover {
         color: $highlight;
     }

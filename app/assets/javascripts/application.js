@@ -24,3 +24,13 @@ $(document).ready( function() {
     });
   }, 1600);
 });
+
+// $(document).ready( function() {
+//     $('#user').on('click', function(){
+//         alert($(this).parent('ul').text);
+//     });
+
+//     $('#user').on('mouseleave', function() {
+//         $(this).text("Lafwind");
+//     });
+// });

@@ -21,6 +21,8 @@ gem 'redis', '~> 3.2.1'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'font-awesome-rails', '~> 4.5'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
