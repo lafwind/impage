@@ -173,20 +173,18 @@
 }
 
 .tag {
-    padding: .3rem 1rem;
-    margin: 0 .3rem;
-    min-width: 2rem;
+    padding: .3rem 1rem !important;
+    margin: 0 .3rem !important;
+    min-width: 2rem !important;
     color: lighten($dark, 39%) !important;
-    border: 1.5px lighten($dark, 39%) solid;
-    font-size: .9rem;
+    border: 1.5px lighten($dark, 39%) solid !important;
+    font-size: .9rem !important;
 
     &:hover {
         border: 1.5px lighten($dark, 19%) solid;
         color: lighten($dark, 19%) !important;
     }
 }
-
-.tag
 
 span.fa-tags {
     margin-left: 2rem;

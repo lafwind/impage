@@ -29,6 +29,9 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'meta_request'
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem 'annotate'
 end
 
 group :production do
