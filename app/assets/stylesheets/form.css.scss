@@ -87,3 +87,14 @@ form {
         margin: 2rem auto;
     }
 }
+
+.error_notification {
+    border: 1px $error solid;
+    padding: 1.5rem 2rem;
+    color: $error;
+}
+
+.error {
+    display: block;
+    color: $error;
+}

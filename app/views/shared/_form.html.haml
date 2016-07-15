@@ -1,9 +1,9 @@
 %div.new_post_form
-  = simple_form_for @post do |f|
+  = simple_form_for @post, html: { novalidate: true } do |f|
     %div.field
       %div.upload
         = f.file_field :image
-      = f.input :title, label: "Name"
+      = f.input :title, required: false, label: "Name"
       = f.input :tag_list, label: "Tags", placeholder: " Separated by space "
       = f.input :description
     %div.actions

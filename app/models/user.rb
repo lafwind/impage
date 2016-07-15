@@ -32,4 +32,7 @@ class User < ActiveRecord::Base
   has_many :posts
   has_many :comments
   acts_as_voter
+
+  validates :name, presence: true, uniqueness: true
+  validates :email, presence: true, uniqueness: true
 end

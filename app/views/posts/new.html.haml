@@ -1,5 +1,7 @@
 %h3 New Post
 
+= render partial: 'shared/errors', locals: { item: @post }
+
 %div.new_post
   = render "shared/form"
 
