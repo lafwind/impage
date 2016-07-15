@@ -3,9 +3,11 @@
   <!--   <h3>Log in</h3> -->
 
   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+    <%= f.error_notification %>
     <div class="field">
-      <%= f.input :email, required: false, autofocus: true %>
-      <%= f.input :password, required: false %>
+      <%= f.input :email, required: true, autofocus: true %>
+      <%= f.input :password, required: true %>
       <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       <div class="actions">
         <%= f.button :submit, "Log in", class: "button button_highlight" %>

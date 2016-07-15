@@ -1,7 +1,7 @@
 %div.large_card
   %div.large_card_header
     %div.large_card_title
-      %span= @post.title
+      %span= @post.title.capitalize
       %span.user
         %span by
         %span.name= link_to "#{@post.user.name.capitalize}", user_path(@post.user_id)
@@ -43,6 +43,8 @@
 
 
 
+
+  -# TODO: comments
 
   -# %div.large_card_comments
   -#   %h5= pluralize(@post.comments.count, "Comment")

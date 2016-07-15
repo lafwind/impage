@@ -1,0 +1,12 @@
+- if item.errors.any?
+  %div.error-msgs
+    %h2
+      = pluralize(item.errors.count, "error")
+
+    %ul
+      - item.errors.messages.each do |msg|
+        - msg.last.each do |detail|
+          %li
+            = msg.first.capitalize
+            %span :
+            = detail.capitalize

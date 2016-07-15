@@ -20,6 +20,9 @@ $white: #ffffff;
 $highlight: #1de0d9;
 $dark: #36495e;
 
+// $error: #ca2a4a;
+$error: #f1a6a6;
+
 html, body {
     box-sizing: border-box !important;
     background-color: darken($white, 2%);
@@ -278,6 +281,35 @@ form + footer {
     margin: 0 auto;
 }
 
+
+#error_explanation, .error-msgs {
+    width: 50%;
+    margin: 0 auto;
+    border: 1px lighten($error, 10%) solid;
+    margin-bottom: 2rem;
+
+    h2 {
+        margin: 0;
+        padding: 0;
+        padding-left: 2rem;
+        height: 3.9rem;
+        line-height: 3.9rem;
+        color: $white;
+        background-color: $error;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    ul {
+        margin: 0 auto;
+        width: 80%;
+        padding: 2rem;
+        color: $error;
+        list-style: none;
+        li {
+        }
+    }
+}
 
 
 // @import './welcome.css.scss';

@@ -49,7 +49,7 @@ Rails.application.routes.draw do
       get "like", to: "posts#like"
       get "dislike", to: "posts#dislike"
     end
-    resources :comments
+    # resources :comments
   end
 
   get "display", to: "static_pages#display"
